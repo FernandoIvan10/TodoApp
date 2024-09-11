@@ -17,3 +17,9 @@ export function deleteTaskFromList(value){
     const position = tasks.indexOf(value,0)
     tasks.splice(position,1)
 }
+
+//Función que edita una tarea del Array de tareas
+export function editTaskFromList(firstValue,updateValue){
+    const position = tasks.indexOf(firstValue,0)
+    tasks[position]=updateValue
+}
