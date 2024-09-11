@@ -12,6 +12,8 @@ export function createInput(placeholder, lbl){
     button.innerHTML = lbl
     button.type = 'button'
 
+    div.setAttribute('class','div-input')
+
     div.appendChild(input)
     div.appendChild(button)
     return div
@@ -25,5 +27,6 @@ export function createList(){
     ul.id="to-doList"
 
     div.appendChild(ul)
+    div.setAttribute('class','div-list')
     return div
 }

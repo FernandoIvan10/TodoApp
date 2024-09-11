@@ -8,8 +8,11 @@ export function getData(){
 
 // Función que añade una tarea al Array de tareas
 export function addTaskToList(value){
-    tasks.push(value)
-    
+    if(tasks.indexOf(value,0)===(-1)){
+        tasks.push(value)
+    }else{
+        alert('No ingreses tareas repetidas')
+    }
 }
 
 //Función que elimina una tarea del Array de tareas
@@ -20,6 +23,10 @@ export function deleteTaskFromList(value){
 
 //Función que edita una tarea del Array de tareas
 export function editTaskFromList(firstValue,updateValue){
-    const position = tasks.indexOf(firstValue,0)
-    tasks[position]=updateValue
+    if(tasks.indexOf(updateValue,0)===(-1)){
+        const position = tasks.indexOf(firstValue,0)
+        tasks[position]=updateValue
+    }else{
+        alert('No ingreses tareas repetidas')
+    }
 }

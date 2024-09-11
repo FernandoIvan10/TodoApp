@@ -26,6 +26,7 @@ function updateList(){
         data.forEach(element =>{
             // Se crean los elementos que contiene el li
             const li = document.createElement('li')
+            const buttonGroup = document.createElement('div');
             const deleteButton = document.createElement('button')
             const editButton = document.createElement('button')
 
@@ -35,12 +36,18 @@ function updateList(){
             // Se le asigna el botón delete
             deleteButton.innerHTML = 'Delete'
             deleteButton.setAttribute('class','deleteButton')
-            li.append(deleteButton)
+            buttonGroup.append(deleteButton);
 
             // Se le asigna el botón edit
             editButton.innerHTML = 'Edit'
             editButton.setAttribute('class','editButton')
-            li.append(editButton)
+            buttonGroup.append(editButton);
+
+            // Se le asigna una clase al div de botones
+            buttonGroup.setAttribute('class', 'button-group');
+
+            // Se agrega el grupo de botones al li
+            li.append(buttonGroup);
 
             // Se agrega el li al ul
             list.append(li)
