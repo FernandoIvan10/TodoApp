@@ -60,7 +60,7 @@ function updateList(){
             // Enviamos el li del botón
             deleteTask(button.closest('li'))
         })
-})
+        })
         const editButtons = document.querySelectorAll('.editButton')
         editButtons.forEach(button=>{
         button.addEventListener('click',function(){
